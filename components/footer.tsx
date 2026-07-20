@@ -58,10 +58,28 @@ export function Footer() {
         </div>
         
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-[#30363d] flex justify-center items-center">
+        <div className="mt-16 pt-8 border-t border-[#30363d] flex flex-col items-center">
           <p className="text-[#8b949e]/60 text-sm">
             {currentYear} Air Solutions. Todos los derechos reservados.
           </p>
+
+          <div className="mt-10 flex flex-col items-center gap-2">
+            <span className="text-xs text-zinc-500">Sitio desarrollado por</span>
+            <a
+              href="https://dosmil12.com/?utm_source=airsolutions&utm_medium=footer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-opacity hover:opacity-80"
+            >
+              <img
+                src="https://pub-8df60d5ed0274fa8a9989b2040218ce5.r2.dev/logodosmil12.png"
+                alt="dosmil12"
+                width={100}
+                height={30}
+                className="object-contain"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
