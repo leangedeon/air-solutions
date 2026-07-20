@@ -1,13 +1,13 @@
 'use client'
 
-import { Factory, Stethoscope, Utensils, Shirt, FlaskConical, Car, Building2, Box } from 'lucide-react'
+import { Factory, Pill, Utensils, Shirt, FlaskConical, Car, Building2, Box } from 'lucide-react'
 
 const industries = [
   { icon: Factory, name: 'Metalurgica', description: 'Procesos de corte, soldadura y tratamiento de metales' },
-  { icon: Stethoscope, name: 'Medica', description: 'Equipamiento hospitalario y laboratorios' },
+  { icon: Pill, name: 'Farmaceutica y Laboratorios', description: 'Produccion farmaceutica y entornos de laboratorio' },
   { icon: Utensils, name: 'Alimenticia', description: 'Procesamiento y envasado de alimentos' },
   { icon: Shirt, name: 'Textil', description: 'Manufactura y tenido de textiles' },
-  { icon: FlaskConical, name: 'Quimica', description: 'Procesos quimicos y farmaceuticos' },
+  { icon: FlaskConical, name: 'Quimica', description: 'Procesos quimicos industriales' },
   { icon: Car, name: 'Automotriz', description: 'Lineas de produccion y pintura' },
   { icon: Building2, name: 'Construccion', description: 'Herramientas neumaticas y equipos' },
   { icon: Box, name: 'Plastica', description: 'Moldeo por inyeccion y extrusion' },

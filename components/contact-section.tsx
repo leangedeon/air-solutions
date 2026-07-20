@@ -66,7 +66,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <div className="text-sm text-[#8b949e]">Ubicacion</div>
-                  <div className="text-lg font-semibold text-white">Buenos Aires, Argentina</div>
+                  <div className="text-lg font-semibold text-white">Av. Belgrano 2666 - Don Torcuato</div>
                 </div>
               </div>
             </div>

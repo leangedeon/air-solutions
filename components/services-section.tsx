@@ -11,12 +11,12 @@ const services = [
   {
     icon: Shield,
     title: 'Especializacion y Respaldo',
-    description: '15 años garantizando soluciones integrales, confiables y eficientes para nuestros clientes en toda Argentina.',
+    description: '+20 años de experiencia en el rubro garantizando soluciones integrales, confiables y eficientes para nuestros clientes en toda Argentina.',
   },
   {
     icon: Truck,
     title: 'Entrega a Todo el Pais',
-    description: 'Nuestra logistica garantiza que los equipos solicitados lleguen en tiempo y forma a cualquier punto del pais.',
+    description: 'Nuestra logistica garantiza que los equipos y repuestos solicitados lleguen en tiempo y forma a cualquier punto del pais.',
   },
   {
     icon: Clock,

@@ -10,11 +10,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Air Solutions | Alquiler de Compresores de Aire Industrial',
-  description: 'Alquiler de compresores de aire industriales en Argentina. 15 años de experiencia, asesoramiento técnico gratuito y entrega a todo el país.',
+  description: 'Alquiler de compresores de aire industriales en Argentina. +20 años de experiencia en el rubro, asesoramiento técnico gratuito y entrega a todo el país.',
   keywords: ['compresores de aire', 'alquiler compresores', 'aire comprimido industrial', 'Argentina'],
   openGraph: {
     title: 'Air Solutions | Alquiler de Compresores de Aire',
-    description: 'Soluciones integrales en aire comprimido industrial. 15 años de experiencia.',
+    description: 'Soluciones integrales en aire comprimido industrial. +20 años de experiencia en el rubro.',
     type: 'website',
     locale: 'es_AR',
   },

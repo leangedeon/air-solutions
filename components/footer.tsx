@@ -16,7 +16,7 @@ export function Footer() {
               className="h-10 w-auto brightness-0 invert"
             />
             <p className="text-[#8b949e] leading-relaxed max-w-md">
-              Lider en alquiler de compresores de aire industriales. 15 años brindando soluciones integrales, confiables y eficientes para la industria argentina.
+              Lider en alquiler de compresores de aire industriales. +20 años de experiencia en el rubro brindando soluciones integrales, confiables y eficientes para la industria argentina.
             </p>
             <a
               href="tel:+5491151756162"
@@ -31,7 +31,7 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-6">Enlaces rapidos</h4>
             <ul className="space-y-3">
-              {['Inicio', 'Servicios', 'Nosotros', 'Industrias', 'Clientes', 'Contacto'].map((item) => (
+              {['Inicio', 'Servicios', 'Nosotros', 'Industrias', 'Contacto'].map((item) => (
                 <li key={item}>
                   <Link
                     href={`#${item.toLowerCase()}`}

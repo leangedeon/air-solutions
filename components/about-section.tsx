@@ -22,8 +22,8 @@ export function AboutSection() {
             </div>
             {/* Stats Card */}
             <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#318ce7] to-[#2678cc] rounded-2xl p-6 shadow-xl glow-blue">
-              <div className="text-5xl font-bold text-white">15</div>
-              <div className="text-white/80">años de experiencia</div>
+              <div className="text-5xl font-bold text-white">+20</div>
+              <div className="text-white/80">años de experiencia en el rubro</div>
             </div>
           </div>
           
@@ -37,7 +37,7 @@ export function AboutSection() {
                 Simbolo de rapidez y eficiencia
               </h2>
               <p className="text-lg text-[#8b949e] leading-relaxed mb-6">
-                Air Solutions es lider en el mercado argentino de alquiler de compresores de aire industriales. Trabajamos para ser el socio estrategico de nuestros clientes, brindando soluciones a medida con una estructura dedicada y orientada a satisfacer cualquier necesidad.
+                Air Solutions es lider en el mercado argentino de venta, reparacion y alquiler de compresores de aire industriales. Trabajamos para ser el socio estrategico de nuestros clientes, brindando soluciones a medida con una estructura dedicada y orientada a satisfacer cualquier necesidad.
               </p>
               <p className="text-lg text-[#8b949e] leading-relaxed">
                 Nuestro departamento tecnico brinda asesoramiento especializado para determinar el compresor de aire mas adecuado, garantizando la solucion mas eficiente del mercado tanto en calidad de aire como en ahorro energetico.

@@ -16,13 +16,13 @@ export function HeroSection() {
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#ec008c]/10 rounded-full blur-[120px]" />
       </div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-0">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 lg:pt-32 lg:pb-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-snug tracking-tight">
                 Alquiler de{' '}
                 <span className="text-[#318ce7]">compresores de aire</span>
               </h1>
@@ -34,12 +34,12 @@ export function HeroSection() {
             {/* Stats Row */}
             <div className="flex flex-wrap gap-8 py-6 border-y border-[#30363d]">
               <div>
-                <div className="text-3xl font-bold text-white">15+</div>
-                <div className="text-sm text-[#8b949e]">Años de experiencia</div>
+                <div className="text-3xl font-bold text-white">+20</div>
+                <div className="text-sm text-[#8b949e]">Años de experiencia en el rubro</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-[#318ce7]">500+</div>
-                <div className="text-sm text-[#8b949e]">Proyectos realizados</div>
+                <div className="text-sm text-[#8b949e]">Clientes satisfechos</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-white">24/7</div>
@@ -69,9 +69,9 @@ export function HeroSection() {
           <div className="relative hidden lg:block">
             <div className="relative rounded-2xl overflow-hidden border border-[#30363d] glow-blue">
               <img 
-                src="/images/compressor-main.png" 
-                alt="Compresor de aire industrial"
-                className="w-full h-[500px] object-cover"
+                src="/images/compressor-main.jpg" 
+                alt="Compresor de aire industrial Air Solutions Argentina"
+                className="w-full h-[500px] object-cover object-center"
               />
               {/* Overlay with info */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/80 to-transparent p-8">
@@ -82,8 +82,8 @@ export function HeroSection() {
                     </svg>
                   </div>
                   <div className="text-white">
-                    <div className="font-semibold">Entrega inmediata</div>
-                    <div className="text-sm text-[#8b949e]">A todo el pais</div>
+                    <div className="font-semibold">Entrega y Logistica</div>
+                    <div className="text-sm text-[#8b949e]">En todo el pais</div>
                   </div>
                 </div>
               </div>
