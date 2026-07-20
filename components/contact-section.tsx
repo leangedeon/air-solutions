@@ -13,7 +13,21 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
+
+    const message = [
+      'Hola, quiero hacer una consulta:',
+      '',
+      `*Nombre:* ${formData.name}`,
+      `*Teléfono:* ${formData.phone}`,
+      `*Email:* ${formData.email}`,
+      '',
+      `*Mensaje:*`,
+      formData.message,
+    ].join('\n')
+
+    const phoneNumber = '5491151756162'
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -149,7 +163,7 @@ export function ContactSection() {
                 type="submit"
                 className="w-full flex items-center justify-center gap-2 bg-[#318ce7] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#2678cc] transition-all group glow-blue"
               >
-                Enviar mensaje
+                Enviar por WhatsApp
                 <Send className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </button>
             </form>
