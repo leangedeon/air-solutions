@@ -1,41 +1,88 @@
 'use client'
 
-import { ArrowRight } from 'lucide-react'
+import {
+  ArrowRight,
+  Wrench,
+  Package,
+  Network,
+  Fan,
+} from 'lucide-react'
 import Link from 'next/link'
+
+const highlights = [
+  {
+    icon: Fan,
+    title: 'Venta y alquiler',
+    description:
+      'Compresores a tornillo, secadores y filtros de línea.',
+  },
+  {
+    icon: Wrench,
+    title: 'Servicio técnico multimarca',
+    description:
+      'Mantenimiento de equipos Atlas Copco, Sullair, Kaeser, Ingersoll Rand, Chicago Pneumatic, Fiac, Fini, DMD, Cetec y más.',
+  },
+  {
+    icon: Package,
+    title: 'Repuestos originales',
+    description: 'Venta de repuestos originales para tu equipo.',
+  },
+  {
+    icon: Network,
+    title: 'Ingeniería e instalación',
+    description: 'Diseño e instalación de redes de aire comprimido.',
+  },
+]
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-[#0d1117]">
-      {/* Gradient Background Effects */}
+    <section
+      id="inicio"
+      className="relative flex min-h-screen items-center overflow-hidden bg-[#0d1117]"
+    >
       <div className="absolute inset-0">
-        {/* Grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(49,140,231,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(49,140,231,0.03)_1px,transparent_1px)] bg-[size:100px_100px]" />
-        
-        {/* Gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#318ce7]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#ec008c]/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 left-1/4 h-[500px] w-[500px] rounded-full bg-[#318ce7]/10 blur-[120px]" />
+        <div className="absolute right-1/4 bottom-1/4 h-[400px] w-[400px] rounded-full bg-[#ec008c]/10 blur-[120px]" />
       </div>
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 lg:pt-32 lg:pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left Content */}
+
+      <div className="relative mx-auto max-w-7xl px-4 pt-28 pb-24 sm:px-6 lg:px-8 lg:pt-32 lg:pb-20">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-8">
-            {/* Main Heading */}
-            <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-snug tracking-tight">
-                Alquiler de{' '}
-                <span className="text-[#318ce7]">compresores de aire</span>
-              </h1>
-              <p className="text-xl text-[#8b949e] max-w-xl leading-relaxed">
-                Alquiler de compresores de aire industriales con asesoramiento tecnico especializado y entrega a todo el pais.
+            <div className="space-y-3">
+              <p className="text-sm font-semibold tracking-wider text-[#318ce7] uppercase">
+                Air Solutions
               </p>
+              <h1 className="max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
+                Soluciones integrales en{' '}
+                <span className="text-[#318ce7]">aire comprimido</span>
+              </h1>
             </div>
-            
-            {/* Stats Row */}
-            <div className="flex flex-wrap gap-8 py-6 border-y border-[#30363d]">
+
+            <ul className="space-y-4">
+              {highlights.map((item) => (
+                <li key={item.title} className="flex gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-[#30363d] bg-[#21262d]">
+                    <item.icon className="h-5 w-5 text-[#318ce7]" />
+                  </div>
+                  <div className="min-w-0 pt-0.5">
+                    <h2 className="text-base font-semibold text-white sm:text-lg">
+                      {item.title}
+                    </h2>
+                    <p className="mt-1 text-sm leading-relaxed text-[#8b949e] sm:text-[15px]">
+                      {item.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex flex-wrap gap-8 border-y border-[#30363d] py-6">
               <div>
                 <div className="text-3xl font-bold text-white">+20</div>
-                <div className="text-sm text-[#8b949e]">Años de experiencia en el rubro</div>
+                <div className="text-sm text-[#8b949e]">
+                  Años de experiencia en el rubro
+                </div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-[#318ce7]">500+</div>
@@ -46,39 +93,46 @@ export function HeroSection() {
                 <div className="text-sm text-[#8b949e]">Soporte tecnico</div>
               </div>
             </div>
-            
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+
+            <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 href="#contacto"
-                className="inline-flex items-center justify-center gap-2 bg-[#318ce7] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#2678cc] transition-all hover:gap-4 group glow-blue"
+                className="glow-blue group inline-flex items-center justify-center gap-2 rounded-lg bg-[#318ce7] px-8 py-4 text-lg font-semibold text-white transition-all hover:gap-4 hover:bg-[#2678cc]"
               >
                 Solicitar cotizacion
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="#servicios"
-                className="inline-flex items-center justify-center gap-2 bg-[#21262d] border border-[#30363d] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#30363d] hover:border-[#318ce7]/50 transition-all"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#30363d] bg-[#21262d] px-8 py-4 text-lg font-semibold text-white transition-all hover:border-[#318ce7]/50 hover:bg-[#30363d]"
               >
                 Ver servicios
               </Link>
             </div>
           </div>
-          
-          {/* Right - Image */}
+
           <div className="relative hidden lg:block">
-            <div className="relative rounded-2xl overflow-hidden border border-[#30363d] glow-blue">
-              <img 
-                src="/images/compressor-main.jpg" 
+            <div className="glow-blue relative overflow-hidden rounded-2xl border border-[#30363d]">
+              <img
+                src="/images/compressor-main.jpg"
                 alt="Compresor de aire industrial Air Solutions Argentina"
-                className="w-full h-[500px] object-cover object-center"
+                className="h-[560px] w-full object-cover object-center"
               />
-              {/* Overlay with info */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/80 to-transparent p-8">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/80 to-transparent p-8">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-[#318ce7] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#318ce7]">
+                    <svg
+                      className="h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </div>
                   <div className="text-white">
@@ -88,18 +142,15 @@ export function HeroSection() {
                 </div>
               </div>
             </div>
-            
-            {/* Floating accent element */}
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#318ce7] to-[#ec008c] rounded-2xl opacity-20 blur-2xl" />
+            <div className="absolute -top-6 -right-6 h-32 w-32 rounded-2xl bg-gradient-to-br from-[#318ce7] to-[#ec008c] opacity-20 blur-2xl" />
           </div>
         </div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+
+      <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2">
         <span className="text-sm text-[#8b949e]">Scroll</span>
-        <div className="w-6 h-10 border-2 border-[#30363d] rounded-full flex justify-center">
-          <div className="w-1.5 h-3 bg-[#318ce7] rounded-full mt-2 animate-bounce" />
+        <div className="flex h-10 w-6 justify-center rounded-full border-2 border-[#30363d]">
+          <div className="mt-2 h-3 w-1.5 animate-bounce rounded-full bg-[#318ce7]" />
         </div>
       </div>
     </section>
